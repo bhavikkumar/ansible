@@ -1,9 +1,7 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
-RUN apt-get update --yes \
-    && apt-get upgrade --yes \
-    && apt install software-properties-common --yes \
-    && apt-add-repository --yes --update ppa:ansible/ansible \
+RUN apt update --yes \
+    && apt upgrade --yes \
     && apt install ansible --yes \
     && apt clean autoclean --yes \
     && apt autoremove --yes
